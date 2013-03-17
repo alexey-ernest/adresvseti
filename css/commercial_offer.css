@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+
+#commercial_offer {
+	margin-top: 0px;
+	font-size: 1.2em;
+	color: #333;
+	text-align: justify;
+}
+#commercial_offer #img {
+	float: right;
+	margin-left: 60px;
+	margin-bottom: 40px;
+}
+
+#commercial_offer h1{
+	font-size: 2.2em;
+	font-weight: normal;
+	color: #000;
+	margin-bottom: 14px;
+}
+#commercial_offer h2{
+	color: #000;
+	font-size: 1.5em;
+	font-style: normal;
+	font-weight: normal;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+#commercial_offer p {
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+#commercial_offer ul {
+	margin-left: 30px;
+}
+#commercial_offer ul li {
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+#commercial_offer a {
+	font-weight: normal;
+	color: #f36;
+	text-decoration: none;
+}
+#commercial_offer a:hover {
+	color: #f36;
+	text-decoration: underline;
+}

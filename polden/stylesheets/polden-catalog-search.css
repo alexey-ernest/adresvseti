@@ -1,0 +1,159 @@
+@charset "utf-8";
+
+/* POLDEN.info catalog search style */
+
+html, body 
+{
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+#height100 {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+  }
+  
+#height100 #height100-content {
+	padding-bottom: 80px;
+}
+
+body #footer {
+	height: 80px;
+	margin-top: -80px;
+}#catalog-tabs-found {
+	padding-right: 0px;
+	padding-left: 0px;
+}
+#catalog-tabs-found .found-results {
+	margin-top: 0em;
+}
+#catalog-tabs-found #found-companies {
+	list-style-type: none;
+	width: 100%;
+	margin-bottom: 1.5em;
+}
+#catalog-tabs-found #found-companies li {
+	list-style-type: none;
+	background-color: #f3f3f3;
+	width: 100%;
+	padding-left: 20px;
+	margin-left: -20px;
+	padding-top: 10px;
+	padding-bottom: 4px;
+	position: relative;
+	overflow: hidden;
+}
+#found-companies li a {
+	color: #147ec9;
+}
+#found-companies li h4 {
+	padding-left: 30px;
+	font-size: 110%;
+	margin-top: 0px;
+	margin-bottom: 4px;
+	height: 18px;
+	white-space: nowrap;
+}
+#found-companies li h4 a {
+	color: #000;
+	text-decoration: none;
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #000;
+}
+#found-companies li h4 .icon.more {
+	background-position: 0px -296px;
+	width: 5px;
+	
+	/* display-block hack from http://blog.grakhov.com/post/99406348/inline-block */
+    min-height: 12px;
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    zoom: 1;
+    *display: inline;
+    _height: 12px;
+}
+#found-companies li h4 a:hover {
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+#found-companies li p.company-adr {
+	margin-left: 30px;
+	margin-bottom: 0px;
+}
+#found-companies li .right-side {
+	float: right;
+	display: inline;
+	margin-right: 10px;
+	text-align: right;
+}
+
+#found-companies li .company-phone {
+	color: #000;
+	white-space: nowrap;
+	margin-bottom: 2px;
+	margin-top: 1px;
+}
+#found-companies li .tag {
+	position: absolute;
+	left: 20px;
+	text-align: center;
+	padding-right: 1px;
+	padding-left: 1px;
+	top: 12px;
+	width: 18px;
+}
+#catalog-tabs-found #found-companies li .company-details {
+	display: none;
+}
+#catalog-tabs-found #found-companies li.details {
+	background-color: #FFF;
+}
+#catalog-tabs-found #found-companies li.details .company-phone{
+	display: none;
+}
+#catalog-tabs-found #found-companies li.details .company-adr{
+	display: none;
+}
+#found-companies li.details h5 {
+	font-weight: normal;
+}
+#found-companies li.details .company-details p {
+	line-height: 130%;
+	color: #666;
+}
+#catalog-tabs-found #found-companies li.details .company-details{
+	display: block;
+}
+#catalog-tabs-found #found-companies li.details .company-details .company-categories {
+	list-style-type: none;
+	overflow: hidden;
+}
+#catalog-tabs-found #found-companies li.details .company-details .company-categories li {
+	float: left;
+	margin-right: 0.3em;
+	font-size: 90%;
+	color: #999;
+	background-color: #FFF;
+	padding: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	display: inline;
+	width: auto;
+}
+#catalog-tabs-found #found-companies li.details .company-details .company-categories li a {
+	color: #999;
+}
+
+
+
+#catalog-tabs-found .pager {
+	margin-left: 30px;
+}

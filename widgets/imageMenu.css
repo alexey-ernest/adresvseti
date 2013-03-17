@@ -1,0 +1,70 @@
+/**************************************************************
+
+	Image Menu
+	v 2.2
+
+**************************************************************/
+
+
+.imageMenu {
+	position: relative;
+	width: 890px;
+	height: 255px;
+	overflow: hidden;
+}
+
+
+
+.imageMenu ul {
+	list-style: none;
+	margin: 0px;
+	display: block;
+	height: 255px;
+	width: 2000px;
+	
+	}
+
+.imageMenu ul li {
+	float: left;
+}
+
+.imageMenu ul li a {
+	text-indent: -1000px;
+	background:#FFFFFF none repeat scroll 0%;
+	border-right: 2px solid #fff;
+	cursor:pointer;
+	display:block;
+	overflow:hidden;
+	width:222px;
+	height: 255px;
+}
+.imageMenu ul li.works a {
+	background-attachment: scroll;
+	background-image: url(../images/menu_portfolio.jpg);
+	background-repeat: repeat;
+	background-position: 0%;
+}
+.imageMenu ul li.prices a {
+	background-attachment: scroll;
+	background-image: url(../images/menu_prices.jpg);
+	background-repeat: repeat;
+	background-position: 0%;
+}
+.imageMenu ul li.order a {
+	background-attachment: scroll;
+	background-image: url(../images/menu_order.jpg);
+	background-repeat: repeat;
+	background-position: 0%;
+}
+.imageMenu ul li.about a {
+	background-attachment: scroll;
+	background-image: url(../images/menu_company.jpg);
+	background-repeat: repeat;
+	background-position: 0%;
+}
+
+.clear {
+	clear: both;
+}
+
+/*************************************************************/

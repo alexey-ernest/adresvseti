@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+#order_now {
+	margin-top: 40px;
+	color: #333;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.2em;
+}
+#order_now #button {
+	float: left;
+	margin-right: 30px;
+}
+#order_now #description {
+	margin-top: auto;
+	margin-bottom: auto;
+	padding-top: 90px;
+}
+.hsplitter {
+	background-color: #f36;
+	height: 4px;
+	margin-top: 60px;
+	margin-bottom: 60px;
+}

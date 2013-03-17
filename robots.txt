@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /fn/
+Disallow: /rcg/
+Disallow: /polden
+Disallow: /polden/*

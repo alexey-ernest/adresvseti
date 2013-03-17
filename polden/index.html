@@ -1,0 +1,799 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>POLDEN.info</title>
+<link href="stylesheets/polden.css" rel="stylesheet" type="text/css" />
+<link href="stylesheets/polden-home.css" rel="stylesheet" type="text/css" />
+<link href="stylesheets/jquery-ui-1.8.17.custom.css" rel="stylesheet" type="text/css" />
+<link href="stylesheets/jquery.treeview.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 9]>
+<link href="stylesheets/ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+<link href="stylesheets/ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 7]>
+<link href="stylesheets/ie7.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 8]>
+<link href="stylesheets/ie8.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script type="text/javascript" src="javascripts/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="javascripts/jquery-ui-1.8.17.custom.min.js"></script>
+<script type="text/javascript" src="javascripts/jquery.treeview.js"></script>
+<script type="text/javascript" src="javascripts/polden.js"></script>
+</head>
+
+<body>
+
+<!--Header-->
+<div id="header">
+	<div id="header-content" class="viewport">
+        <a id="logo" href="http://polden.info" title="PoldenInfo">POLDEN.info</a>
+        <div id="city-selector">
+        	<span id="city-popup-wrapper">
+                <a href="#" id="city-selected">Томск</a> <i class="icon"></i>
+                <span id="city-popup" class="popup">
+                    <span id="city-list">
+                        <a href="#">Кемерово</a>
+                        <a href="#">Новокузнецк</a>
+                    </span>
+                </span>
+        	</span>
+        </div>
+        <div id="account">
+			<a href="#">Регистрация</a> | <a href="#">Вход</a>
+        	<div id="current-weather"><span id="current-weather-selector"><a href="#">Погода</a></span> -18</div>
+        </div>
+        <div id="navigation">
+            <ul id="sections">
+            	<li><a href="#">Фирмы, товары</a></li>
+                <li><a href="#">Карта</a></li>
+                <li><a href="#">Цены</a></li>
+                <li><a href="#">Новости</a></li>
+                <li class="last-section"><a href="#">Акции, скидки</a></li>
+            </ul>
+            <div id="search">
+            	<form action="" method="get" enctype="application/x-www-form-urlencoded" name="search-form" id="search-form">
+					<input type="text" name="q" id="search-input" />
+            	    <input type="submit" id="search-submit" class="button" value="Найти" />
+            	</form>
+            </div>
+        </div>
+        <div class="clr"></div>
+	</div>
+</div>
+
+<!--Main-->
+<div id="main">
+	<div id="page" class="viewport">
+    
+    	<!--Page Sidebar-->
+    	<div id="sidebar" class="tab-block">
+        	<div id="catalog-tabs" class="tabs">
+            		<ul>
+                        <li><a href="#catalog-tabs-list">Каталог фирм</a></li>
+                    </ul>
+                    <div id="catalog-tabs-list">
+                    		<ul id="catalog-tree">
+                                <li><span>Телефоны срочного вызова</span>
+                                    <ul>
+                                        <li><a href="#">Телефоны срочного вызова, справочные</a> <i>96</i></li>
+                                        <li><a href="#">Транспорт</a> <i>31</i></li>
+                                        <li><a href="#">Такси</a> <i>291</i></li>
+                                        <li><a href="#">Медицина, помощь детям</a> <i>22</i></li>
+                                        <li><a href="#">Телефоны экстренной помощи</a> <i>36</i></li>
+                                    </ul>
+                                </li>
+                                <li><span>Авто</span>
+                                    <ul>
+                                        <li><a href="#">Телефоны срочного вызова, справочные</a> <i>96</i></li>
+                                        <li><a href="#">Транспорт</a> <i>31</i></li>
+                                        <li><a href="#">Такси</a> <i>291</i></li>
+                                        <li><a href="#">Медицина, помощь детям</a> <i>22</i></li>
+                                        <li><a href="#">Телефоны экстренной помощи</a> <i>36</i></li>
+                                    </ul>
+                                </li>
+                                <li><span>Бизнес, финансы</span>
+                                    <ul>
+                                        <li><a href="#">Телефоны срочного вызова, справочные</a> <i>96</i></li>
+                                        <li><a href="#">Транспорт</a> <i>31</i></li>
+                                        <li><a href="#">Такси</a> <i>291</i></li>
+                                        <li><a href="#">Медицина, помощь детям</a> <i>22</i></li>
+                                        <li><a href="#">Телефоны экстренной помощи</a> <i>36</i></li>
+                                    </ul>
+                                </li>
+                                <li><span>Государство и общество</span>
+                                    <ul>
+                                        <li><a href="#">Телефоны срочного вызова, справочные</a> <i>96</i></li>
+                                        <li><a href="#">Транспорт</a> <i>31</i></li>
+                                        <li><a href="#">Такси</a> <i>291</i></li>
+                                        <li><a href="#">Медицина, помощь детям</a> <i>22</i></li>
+                                        <li><a href="#">Телефоны экстренной помощи</a> <i>36</i></li>
+                                    </ul>
+                                </li>
+                                <li><span>Здоровье и красота</span>
+                                    <ul>
+                                        <li><a href="#">Телефоны срочного вызова, справочные</a> <i>96</i></li>
+                                        <li><a href="#">Транспорт</a> <i>31</i></li>
+                                        <li><a href="#">Такси</a> <i>291</i></li>
+                                        <li><a href="#">Медицина, помощь детям</a> <i>22</i></li>
+                                        <li><a href="#">Телефоны экстренной помощи</a> <i>36</i></li>
+                                    </ul>
+                                </li>
+                                <li><span>Культура, наука, образование</span>
+                                    <ul>
+                                        <li><a href="#">Телефоны срочного вызова, справочные</a> <i>96</i></li>
+                                        <li><a href="#">Транспорт</a> <i>31</i></li>
+                                        <li><a href="#">Такси</a> <i>291</i></li>
+                                        <li><a href="#">Медицина, помощь детям</a> <i>22</i></li>
+                                        <li><a href="#">Телефоны экстренной помощи</a> <i>36</i></li>
+                                    </ul>
+                                </li>
+                                <li><span>Недвижимость</span>
+                                    <ul>
+                                        <li><a href="#">Телефоны срочного вызова, справочные</a> <i>96</i></li>
+                                        <li><a href="#">Транспорт</a> <i>31</i></li>
+                                        <li><a href="#">Такси</a> <i>291</i></li>
+                                        <li><a href="#">Медицина, помощь детям</a> <i>22</i></li>
+                                        <li><a href="#">Телефоны экстренной помощи</a> <i>36</i></li>
+                                    </ul>
+                                </li>
+                                <li><span>Развлечения, спорт, туризм</span>
+                                    <ul>
+                                        <li><a href="#">Телефоны срочного вызова, справочные</a> <i>96</i></li>
+                                        <li><a href="#">Транспорт</a> <i>31</i></li>
+                                        <li><a href="#">Такси</a> <i>291</i></li>
+                                        <li><a href="#">Медицина, помощь детям</a> <i>22</i></li>
+                                        <li><a href="#">Телефоны экстренной помощи</a> <i>36</i></li>
+                                    </ul>
+                                </li>
+                                <li><span>СМИ, реклама, полиграфия</span>
+                                    <ul>
+                                        <li><a href="#">Телефоны срочного вызова, справочные</a> <i>96</i></li>
+                                        <li><a href="#">Транспорт</a> <i>31</i></li>
+                                        <li><a href="#">Такси</a> <i>291</i></li>
+                                        <li><a href="#">Медицина, помощь детям</a> <i>22</i></li>
+                                        <li><a href="#">Телефоны экстренной помощи</a> <i>36</i></li>
+                                    </ul>
+                                </li>
+                                <li><span>Продовольственные товары</span>
+                                    <ul>
+                                        <li><a href="#">Телефоны срочного вызова, справочные</a> <i>96</i></li>
+                                        <li><a href="#">Транспорт</a> <i>31</i></li>
+                                        <li><a href="#">Такси</a> <i>291</i></li>
+                                        <li><a href="#">Медицина, помощь детям</a> <i>22</i></li>
+                                        <li><a href="#">Телефоны экстренной помощи</a> <i>36</i></li>
+                                    </ul>
+                                </li>
+                                <li><span>Производство и торговля</span>
+                                    <ul>
+                                        <li><a href="#">Телефоны срочного вызова, справочные</a> <i>96</i></li>
+                                        <li><a href="#">Транспорт</a> <i>31</i></li>
+                                        <li><a href="#">Такси</a> <i>291</i></li>
+                                        <li><a href="#">Медицина, помощь детям</a> <i>22</i></li>
+                                        <li><a href="#">Телефоны экстренной помощи</a> <i>36</i></li>
+                                    </ul>
+                                </li>
+                                <li><span>Транспорт</span>
+                                    <ul>
+                                        <li><a href="#">Телефоны срочного вызова, справочные</a> <i>96</i></li>
+                                        <li><a href="#">Транспорт</a> <i>31</i></li>
+                                        <li><a href="#">Такси</a> <i>291</i></li>
+                                        <li><a href="#">Медицина, помощь детям</a> <i>22</i></li>
+                                        <li><a href="#">Телефоны экстренной помощи</a> <i>36</i></li>
+                                    </ul>
+                                </li>
+                                <li><span>Услуги</span>
+                                    <ul>
+                                        <li><a href="#">Телефоны срочного вызова, справочные</a> <i>96</i></li>
+                                        <li><a href="#">Транспорт</a> <i>31</i></li>
+                                        <li><a href="#">Такси</a> <i>291</i></li>
+                                        <li><a href="#">Медицина, помощь детям</a> <i>22</i></li>
+                                        <li><a href="#">Телефоны экстренной помощи</a> <i>36</i></li>
+                                    </ul>
+                                </li>
+                                <li><span>Избранное</span>
+                                    <ul>
+                                        <li><a href="#">Телефоны срочного вызова, справочные</a> <i>96</i></li>
+                                        <li><a href="#">Транспорт</a> <i>31</i></li>
+                                        <li><a href="#">Такси</a> <i>291</i></li>
+                                        <li><a href="#">Медицина, помощь детям</a> <i>22</i></li>
+                                        <li><a href="#">Телефоны экстренной помощи</a> <i>36</i></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                    </div>
+            </div>
+            <ul id="companies">
+            	<li><a href="#"><img src="images/companies/1.jpg" alt="" />Чудо-дети - детская одежда и развивающие игрушки</a></li>
+                <li><a href="#"><img src="images/companies/2.jpg" alt="" />СтройИнвест - строительная компания</a></li>
+                <li><a href="#"><img src="images/companies/3.jpg" alt="" />Адвокаты Устюговы - юридичесикие услуги</a></li>
+                <li><a href="#"><img src="images/companies/4.jpg" alt="" />Идеал - стоматология</a></li>
+                <li><a href="#"><img src="images/companies/5.jpg" alt="" />Моджи - магазин женской одежды</a></li>
+                <li><a href="#"><img src="images/companies/6.jpg" alt="" />Башня - кафе</a></li>
+                <li><a href="#"><img src="images/companies/7.jpg" alt="" />Калипсо - центр туризма</a></li>
+                <li><a href="#"><img src="images/companies/8.jpg" alt="" />Портное дело - учебный центр</a></li>
+                <li><a href="#"><img src="images/companies/9.jpg" alt="" />Калипсо - центр туризма</a></li>
+                <li><a href="#"><img src="images/companies/1.jpg" alt="" />Чудо-дети - детская одежда и развивающие игрушки</a></li>
+                <li><a href="#"><img src="images/companies/2.jpg" alt="" />СтройИнвест - строительная компания</a></li>
+                <li><a href="#"><img src="images/companies/3.jpg" alt="" />Адвокаты Устюговы - юридичесикие услуги</a></li>
+            </ul>
+            <a href="#" class="button">Все компании</a>
+        </div>
+        
+        <!--Page Content-->
+        <div id="content">
+        
+        	<h1 id="home-h1">Справочник организаций Томска</h1>	
+        
+        	<div id="map-widget">
+            	<div id="map-widget-content"><img src="images/map.jpg" width="1208" height="578" alt="" /></div>
+                <div id="map-widget-shadow"></div>
+           	</div>
+            
+            <div id="content-main">
+            
+                <div class="content-sidebar tab-block">
+                    <div id="top-tabs" class="tabs">
+                        <ul>
+                            <li><a href="#top-tabs-20plus">Top 10+</a></li>
+                            <li><a href="#top-tabs-20minus">Top 10-</a></li>
+                        </ul>
+                        <div id="top-tabs-20plus" class="top-tab">
+                            <ul class="top-list">
+                                <li>
+                                    <div class="tag">99</div>
+                                    <h4><a href="#">Промсвязьбанк</a></h4>
+                                    <i><a href="#">Бизнес, финансы</a></i>
+                                </li>
+                                <li>
+                                    <div class="tag">80</div>
+                                    <h4><a href="#">Альфабанк</a></h4>
+                                    <i><a href="#">Бизнес, финансы</a></i>
+                                </li>
+                                <li>
+                                    <div class="tag">75</div>
+                                    <h4><a href="#">Чудо-дети</a></h4>
+                                    <i><a href="#">Одежда для детей</a></i>
+                                </li>
+                                <li>
+                                    <div class="tag">70</div>
+                                    <h4><a href="#">Шоконат</a></h4>
+                                    <i><a href="#">Здоровье</a></i>
+                                </li>
+                                <li>
+                                    <div class="tag">65</div>
+                                    <h4><a href="#">Здоровье и красота</a></h4>
+                                    <i><a href="#">Бизнес, финансы</a></i>
+                                </li>
+                                <li>
+                                    <div class="tag">60</div>
+                                    <h4><a href="#">Культура, наука</a></h4>
+                                    <i><a href="#">Бизнес, финансы</a></i>
+                                </li>
+                                <li>
+                                    <div class="tag">55</div>
+                                    <h4><a href="#">Промсвязьбанк</a></h4>
+                                    <i><a href="#">Бизнес, финансы</a></i>
+                                </li>
+                                <li>
+                                    <div class="tag">50</div>
+                                    <h4><a href="#">Альфабанк</a></h4>
+                                    <i><a href="#">Бизнес, финансы</a></i>
+                                </li>
+                                <li>
+                                    <div class="tag">45</div>
+                                    <h4><a href="#">Чудо-дети</a></h4>
+                                    <i><a href="#">Одежда для детей</a></i>
+                                </li>
+                                <li>
+                                    <div class="tag">40</div>
+                                    <h4><a href="#">Шоконат</a></h4>
+                                    <i><a href="#">Здоровье</a></i>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="top-tabs-20minus" class="top-tab">
+                            <ul class="top-list">
+                                <li>
+                                    <div class="tag gray">-45</div>
+                                    <h4><a href="#">Чудо-дети</a></h4>
+                                    <i><a href="#">Одежда для детей</a></i>
+                                </li>
+                                <li>
+                                    <div class="tag gray">-40</div>
+                                    <h4><a href="#">Шоконат</a></h4>
+                                    <i><a href="#">Здоровье</a></i>
+                                </li>
+                                <li>
+                                    <div class="tag gray">-39</div>
+                                    <h4><a href="#">Здоровье и красота</a></h4>
+                                    <i><a href="#">Бизнес, финансы</a></i>
+                                </li>
+                                <li>
+                                    <div class="tag gray">-38</div>
+                                    <h4><a href="#">Культура, наука</a></h4>
+                                    <i><a href="#">Бизнес, финансы</a></i>
+                                </li>
+                                <li>
+                                    <div class="tag gray">-30</div>
+                                    <h4><a href="#">Промсвязьбанк</a></h4>
+                                    <i><a href="#">Бизнес, финансы</a></i>
+                                </li>
+                                <li>
+                                    <div class="tag gray">-28</div>
+                                   <h4> <a href="#">Альфабанк</a></h4>
+                                    <i><a href="#">Бизнес, финансы</a></i>
+                                </li>
+                                <li>
+                                    <div class="tag gray">-25</div>
+                                    <h4><a href="#">Чудо-дети</a></h4>
+                                    <i><a href="#">Одежда для детей</a></i>
+                                </li>
+                                <li>
+                                    <div class="tag gray">-22</div>
+                                    <h4><a href="#">Шоконат</a></h4>
+                                    <i><a href="#">Здоровье</a></i>
+                                </li>
+                                <li>
+                                    <div class="tag gray">-21</div>
+                                    <h4><a href="#">Здоровье и красота</a></h4>
+                                    <i><a href="#">Бизнес, финансы</a></i>
+                                </li>
+                                <li>
+                                    <div class="tag gray">-20</div>
+                                    <h4><a href="#">Культура, наука</a></h4>
+                                    <i><a href="#">Бизнес, финансы</a></i>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            
+                <div id="reviews" class="tab-block">
+                    <div id="reviews-tabs" class="tabs">
+                        <ul>
+                            <li><a href="#review-tabs-companies">Отзывы о фирмах</a></li>
+                            <li><a href="#review-tabs-staff">Отзывы о сотрудниках</a></li>
+                        </ul>
+                        <div id="review-tabs-companies" class="review-tab">
+                        	<ul class="review-list">
+                            	<li>
+                                	<div class="tag">99</div>
+                                    <a href="#"><img src="images/review-avatars/review-avatar-empty.png" class="avatar" alt="" /></a>
+                                    <div class="review-viewport"><a href="#">Чудо-Дети</a> &larr; <a href="#" class="review-brief">&laquo;Хороший выбор. Отличный персонал, вежливые и доброжелательные девушк ...&raquo;</a></div>
+                                    <div class="clr"></div>
+                                </li>
+                                <li>
+                                	<div class="tag">10</div>
+                                    <a href="#"><img src="images/review-avatars/review-avatar-empty.png" class="avatar" alt="" /></a>
+                                    <div class="review-viewport"><a href="#">Шоконат</a> &larr; <a href="#" class="review-brief">&laquo;Косметика действительно уникальная, основана на природных компонентах ...&raquo;</a></div>
+                                    <div class="clr"></div>
+                                </li>
+                                <li>
+                                	<div class="tag gray">12</div>
+                                    <a href="#"><img src="images/review-avatars/review-avatar-1.png" class="avatar" alt="" /></a>
+                                    <div class="review-viewport"><a href="#">CтройИнвест</a> &larr; <a href="#" class="review-brief">&laquo;Хороший выбор. Отличный персонал, вежливые и доброжелат...&raquo;</a></div>
+                                    <div class="clr"></div>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/review-avatars/review-avatar-empty.png" class="avatar" alt="" /></a>
+                                    <div class="review-viewport"><a href="#">CтройИнвест</a> &larr; <a href="#" class="review-brief">&laquo;Хороший выбор. Отличный персонал, вежливые и доброжелат...&raquo;</a></div>
+                                    <div class="clr"></div>
+                                </li>
+                            	<li>
+                                	<div class="tag">99</div>
+                                    <a href="#"><img src="images/review-avatars/review-avatar-empty.png" class="avatar" alt="" /></a>
+                                    <div class="review-viewport"><a href="#">Чудо-Дети</a> &larr; <a href="#" class="review-brief">&laquo;Хороший выбор. Отличный персонал, вежливые и доброжелательные девушк ...&raquo;</a></div>
+                                    <div class="clr"></div>
+                                </li>
+                                <li>
+                                	<div class="tag">10</div>
+                                    <a href="#"><img src="images/review-avatars/review-avatar-empty.png" class="avatar" alt="" /></a>
+                                    <div class="review-viewport"><a href="#">Шоконат</a> &larr; <a href="#" class="review-brief">&laquo;Косметика действительно уникальная, основана на природных компонентах ...&raquo;</a></div>
+                                    <div class="clr"></div>
+                                </li>
+                                <li>
+                                	<div class="tag gray">12</div>
+                                    <a href="#"><img src="images/review-avatars/review-avatar-1.png" class="avatar" alt="" /></a>
+                                    <div class="review-viewport"><a href="#">CтройИнвест</a> &larr; <a href="#" class="review-brief">&laquo;Хороший выбор. Отличный персонал, вежливые и доброжелат...&raquo;</a></div>
+                                    <div class="clr"></div>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/review-avatars/review-avatar-empty.png" class="avatar" alt="" /></a>
+                                    <div class="review-viewport"><a href="#">CтройИнвест</a> &larr; <a href="#" class="review-brief">&laquo;Хороший выбор. Отличный персонал, вежливые и доброжелат...&raquo;</a></div>
+                                    <div class="clr"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="review-tabs-staff" class="review-tab">
+                        	<ul class="review-list">
+                                <li>
+                                	<div class="tag gray">12</div>
+                                    <a href="#"><img src="images/review-avatars/review-avatar-1.png" class="avatar" alt="" /></a>
+                                    <div class="review-viewport"><a href="#">CтройИнвест</a> &larr; <a href="#" class="review-brief">&laquo;Хороший выбор. Отличный персонал, вежливые и доброжелат...&raquo;</a></div>
+                                    <div class="clr"></div>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/review-avatars/review-avatar-empty.png" class="avatar" alt="" /></a>
+                                    <div class="review-viewport"><a href="#">CтройИнвест</a> &larr; <a href="#" class="review-brief">&laquo;Хороший выбор. Отличный персонал, вежливые и доброжелат...&raquo;</a></div>
+                                    <div class="clr"></div>
+                                </li>
+                            	<li>
+                                	<div class="tag">99</div>
+                                    <a href="#"><img src="images/review-avatars/review-avatar-empty.png" class="avatar" alt="" /></a>
+                                    <div class="review-viewport"><a href="#">Чудо-Дети</a> &larr; <a href="#" class="review-brief">&laquo;Хороший выбор. Отличный персонал, вежливые и доброжелательные девушк ...&raquo;</a></div>
+                                    <div class="clr"></div>
+                                </li>
+                                <li>
+                                	<div class="tag">10</div>
+                                    <a href="#"><img src="images/review-avatars/review-avatar-empty.png" class="avatar" alt="" /></a>
+                                    <div class="review-viewport"><a href="#">Шоконат</a> &larr; <a href="#" class="review-brief">&laquo;Косметика действительно уникальная, основана на природных компонентах ...&raquo;</a></div>
+                                    <div class="clr"></div>
+                                </li>
+                                <li>
+                                	<div class="tag gray">12</div>
+                                    <a href="#"><img src="images/review-avatars/review-avatar-1.png" class="avatar" alt="" /></a>
+                                    <div class="review-viewport"><a href="#">CтройИнвест</a> &larr; <a href="#" class="review-brief">&laquo;Хороший выбор. Отличный персонал, вежливые и доброжелат...&raquo;</a></div>
+                                    <div class="clr"></div>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/review-avatars/review-avatar-empty.png" class="avatar" alt="" /></a>
+                                    <div class="review-viewport"><a href="#">CтройИнвест</a> &larr; <a href="#" class="review-brief">&laquo;Хороший выбор. Отличный персонал, вежливые и доброжелат...&raquo;</a></div>
+                                    <div class="clr"></div>
+                                </li>
+                                <li>
+                                	<div class="tag gray">12</div>
+                                    <a href="#"><img src="images/review-avatars/review-avatar-1.png" class="avatar" alt="" /></a>
+                                    <div class="review-viewport"><a href="#">CтройИнвест</a> &larr; <a href="#" class="review-brief">&laquo;Хороший выбор. Отличный персонал, вежливые и доброжелат...&raquo;</a></div>
+                                    <div class="clr"></div>
+                                </li>
+                                <li>
+                                	<div class="tag">10</div>
+                                    <a href="#"><img src="images/review-avatars/review-avatar-empty.png" class="avatar" alt="" /></a>
+                                    <div class="review-viewport"><a href="#">Шоконат</a> &larr; <a href="#" class="review-brief">&laquo;Косметика действительно уникальная, основана на природных компонентах ...&raquo;</a></div>
+                                    <div class="clr"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="clrrgt">&nbsp;</div><!--Important! Not empty clear tag! Special for IE8-->
+                
+                <div class="content-sidebar tab-block">
+                    <div id="recomended">
+                        <div id="recomended-tabs" class="tabs">
+                            <ul>
+                                <li><a href="#recomended-tabs-recomended">Рекомендуем</a></li>
+                            </ul>
+                            <div id="recomended-tabs-recomended" class="top-tab">
+                                <ul class="recomended-list">
+                                    <li>
+                                    	<a href="#"><img src="images/recomended/1.jpg" alt="" /></a>
+										<h4><a href="#">Необъявленная генетическая война</a></h4>
+                                        "Кем бы я хотел стать? ... Понимаете, я себе представил, как маленькие...
+                                    </li>
+                                    <li>
+                                    	<a href="#"><img src="images/recomended/2.jpg" alt="" /></a>
+                                        <h4><a href="#">Курение разрушает ДНК, калеча будущих детей (видео)</a></h4>
+                                        Курение вредит самому курильщику (парни становятся импотентами, а девушки...
+                                    </li>
+                                    <li>
+                                    	<a href="#"><img src="images/recomended/3.jpg" alt="" /></a>
+                                        <h4><a href="#">ЕдРо умножила свои голоса на 3-8. Как именно. Видео</a></h4>
+                                        Опросив большенство знакомых, родственников и коллег  я выяснил - НИКТО ИЗ...
+                                    </li>
+                                    <li>
+                                    	<a href="#"><img src="images/recomended/4.jpg" alt="" /></a>
+                                        <h4><a href="#">Искусство быть счастливым. Видео</a></h4>
+                                        Гениальный тренинг раскрывающий нам глаза на то что - счастье требует ума,...
+                                    </li>
+                                    <li>
+                                    	<a href="#"><img src="images/recomended/5.jpg" alt="" /></a>
+                                        <h4><a href="#">Тайны любви. Документальный фильм</a></h4>
+                                        1фильм о том, почему из сотен людей мы выбираем одного. Каким образом это...
+                                    </li>
+                                    <li>
+                                    	<a href="#"><img src="images/recomended/1.jpg" alt="" /></a>
+                                        <h4><a href="#">Необъявленная генетическая война</a></h4>
+                                        "Кем бы я хотел стать? ... Понимаете, я себе представил, как маленькие...
+                                    </li>
+                                    <li>
+                                    	<a href="#"><img src="images/recomended/2.jpg" alt="" /></a>
+                                        <h4><a href="#">Курение разрушает ДНК, калеча будущих детей (видео)</a></h4>
+                                        Курение вредит самому курильщику (парни становятся импотентами, а девушки...
+                                    </li>
+                                    <li>
+                                    	<a href="#"><img src="images/recomended/3.jpg" alt="" /></a>
+                                        <h4><a href="#">ЕдРо умножила свои голоса на 3-8. Как именно. Видео</a></h4>
+                                        Опросив большенство знакомых, родственников и коллег  я выяснил - НИКТО ИЗ...
+                                    </li>
+                                    <li>
+                                    	<a href="#"><img src="images/recomended/4.jpg" alt="" /></a>
+                                        <h4><a href="#">Искусство быть счастливым. Видео</a></h4>
+                                        Гениальный тренинг раскрывающий нам глаза на то что - счастье требует ума,...
+                                    </li>
+                                    <li>
+                                    	<a href="#"><img src="images/recomended/5.jpg" alt="" /></a>
+                                        <h4><a href="#">Тайны любви. Документальный фильм</a></h4>
+                                        1фильм о том, почему из сотен людей мы выбираем одного. Каким образом это...
+                                    </li>
+                                    <li>
+                                    	<a href="#"><img src="images/recomended/1.jpg" alt="" /></a>
+                                        <h4><a href="#">Необъявленная генетическая война</a></h4>
+                                        "Кем бы я хотел стать? ... Понимаете, я себе представил, как маленькие...
+                                    </li>
+                                    <li>
+                                    	<a href="#"><img src="images/recomended/2.jpg" alt="" /></a>
+                                        <h4><a href="#">Курение разрушает ДНК, калеча будущих детей (видео)</a></h4>
+                                        Курение вредит самому курильщику (парни становятся импотентами, а девушки...
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="content-ads">
+                        <p>Контентная реклама</p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                    </div>
+                </div>
+                
+                <div id="news" class="tab-block">
+                	<div id="news-tabs" class="tabs">
+                        <ul>
+                            <li><a href="#news-tabs-city">Город</a></li>
+                            <li class="ui-tabs-selected"><a href="#news-tabs-business">Бизнес</a></li>
+                            <li><a href="#news-tabs-last">Свежие</a></li>
+                            <li><a href="#news-tabs-discuss">Обсуждаем</a></li>
+                        </ul>
+                        <div id="news-tabs-city">
+                        	Город
+                        </div>
+                        <div id="news-tabs-business">
+                        	<ul class="news-list right-align">
+                            	<li class="news-primary">
+                                	<a href="#"><img src="images/news/big.jpg" class="news-image" alt="" /></a>
+                                    <div class="news-text">
+                                    	<h3><a href="#">Открыт лыжный сезон</a></h3>
+                                        <p>Наряду с телевидением и журналистикой, печатными средствами массовой информации, вырастает новая империя</p>
+                                        <div class="news-stats"><span class="news-tags"><span class="tag">+105</span> <span class="tag blue">108<i class="tag-arrow"></i></span></span> <a href="#">Комментировать</a> | Просмотров 200</div>
+                                    </div>
+                                    <div class="clr"></div>
+                                </li>
+                            	<li>
+                                	<a href="#"><img src="images/news/1.jpg" class="news-image" alt="" /></a>
+                                    <div class="news-text">
+                                    	<h3><a href="#">Церковь выступает за подавление народного недовольства силой армии</a></h3>
+                                        <p>После вступления России в ВТО, которое ожидается в середине 2012 года, начнут</p>
+                                        <div class="news-stats"><span class="news-tags"><span class="tag">+105</span> <span class="tag blue">18<i class="tag-arrow"></i></span></span> <a href="#">Комментировать</a> | Просмотров 200</div>
+                                    </div>
+                                    <div class="clr"></div>
+                                </li>
+                                <li>
+                                	<a href="#"><img src="images/news/2.jpg" class="news-image" alt="" /></a>
+                                    <div class="news-text">
+                                    	<h3><a href="#">SPIDометр. Говорим об иммунной системе. Выпуск №3</a></h3>
+                                        <p>В студии биолог Евгений Миронов, ведущий</p>
+                                        <div class="news-stats"><span class="news-tags"><span class="tag">+89</span> <span class="tag blue">1<i class="tag-arrow"></i></span></span> <a href="#">Комментировать</a> | Просмотров 150</div>
+                                    </div>
+                                    <div class="clr"></div>
+                                </li>
+                                <li class="news-highlighted">
+                                	<a href="#"><img src="images/news/3.jpg" class="news-image" alt="" /></a>
+                                    <div class="news-text">
+                                    	<h3><a href="#">SPIDометр. Говорим об иммунной системе. Выпуск №3</a></h3>
+                                        <p>Уважаемые абоненты, Вы можете оплатить</p>
+                                        <div class="news-stats"><span class="news-tags"><span class="tag">+36</span> <span class="tag blue">26<i class="tag-arrow"></i></span></span> <a href="#">Комментировать</a> | Просмотров 100</div>
+                                    </div>
+                                    <div class="clr"></div>
+                                </li>
+                                <li>
+                                	<a href="#"><img src="images/news/1.jpg" class="news-image" alt="" /></a>
+                                    <div class="news-text">
+                                    	<h3><a href="#">Церковь выступает за подавление народного недовольства силой армии</a></h3>
+                                        <p>После вступления России в ВТО, которое ожидается в середине 2012 года, начнут</p>
+                                        <div class="news-stats"><span class="news-tags"><span class="tag">+24</span> <span class="tag blue">23<i class="tag-arrow"></i></span></span> <a href="#">Комментировать</a> | Просмотров 97</div>
+                                    </div>
+                                    <div class="clr"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="news-tabs-last">Свежие</div>
+                        <div id="news-tabs-discuss">Обсуждаем</div>
+                    </div>
+                </div>
+
+                <div id="vote" class="tab-block">
+                	<div id="vote-tabs" class="tabs">
+                        <ul>
+                            <li><a href="#vote-tabs-main">Опрос</a></li>
+                        </ul>
+                        <div id="vote-tabs-main">
+                        	<h5>За какую партию вы голосовали?</h5>
+                            <form id="vote-form" name="vote-form" method="post" action="">
+                                <p><label>
+                                        <input type="radio" name="vote-variants" value="1" id="vote-variants_0" />
+                                        Единая Россия</label></p>
+								<p><label>
+                                        <input type="radio" name="vote-variants" value="2" id="vote-variants_1" />
+                                        Справедливая Россия</label></p>
+                                <p><label>
+                                        <input type="radio" name="vote-variants" value="3" id="vote-variants_2" />
+                                        Правое дело</label></p>
+                                <p><label>
+                                        <input type="radio" name="vote-variants" value="4" id="vote-variants_3" />
+                                        Патриоты России</label></p>
+                                <p><label>
+                                        <input type="radio" name="vote-variants" value="5" id="vote-variants_4" />
+                                        Яблоко</label></p>
+                                <p><label>
+                                        <input type="radio" name="vote-variants" value="6" id="vote-variants_5" />
+                                        КПРФ</label></p>
+                                <p><label>
+                                        <input type="radio" name="vote-variants" value="7" id="vote-variants_6" />
+                                        ЛДПР</label></p>
+                                 <input type="submit" class="button" value="Голосовать" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div id="weather" class="tab-block">
+                	<div id="weather-tabs" class="tabs">
+                        <ul>
+                            <li><a href="#weather-tabs-forecast4">Прогноз на 4 дня</a></li>
+                            <li><a href="#weather-tabs-forecast10">Прогноз на 10 дней</a></li>
+                        </ul>
+                        <div id="weather-tabs-forecast4" class="weather-tabs-forecast">
+                        	<table class="weather-table" border="0" cellspacing="0" cellpadding="0">
+                        	    <tr>
+                        	        <th scope="col">&nbsp;</th>
+                        	        <th scope="col">День</th>
+                        	        <th scope="col">Ночь</th>
+                        	        <th scope="col">&nbsp;</th>
+                        	        <th scope="col">&nbsp;</th>
+                    	        </tr>
+                        	    <tr>
+                        	        <td class="weather-day"><h3>Сегодня</h3> 14 декабря</td>
+                        	        <td class="weather-daytemp">-20 <img src="images/weather/1.png" alt="" class="weather-icon" title="переменная облачность" /></td>
+                        	        <td class="weather-nighttemp">-18 <img src="images/weather/2.png" alt="" class="weather-icon" title="переменная облачность" /></td>
+                        	        <td class="weather-wind">СВ 2м/с</td>
+                        	        <td class="weather-cond">переменная облачность небольшой снег</td>
+                    	        </tr>
+                        	    <tr class="weather-dayoff even">
+                        	        <td class="weather-day"><h3>Сб</h3> &nbsp;</td>
+                        	        <td class="weather-daytemp">-20 <img src="images/weather/1.png" alt="" class="weather-icon" title="переменная облачность" /></td>
+                        	        <td class="weather-nighttemp">-18 <img src="images/weather/2.png" alt="" class="weather-icon" title="переменная облачность" /></td>
+                        	        <td class="weather-wind">СВ 2м/с</td>
+                        	        <td class="weather-cond">переменная облачность небольшой снег</td>
+                    	        </tr>
+                        	    <tr class="weather-dayoff">
+                        	        <td class="weather-day"><h3>Вс</h3> &nbsp;</td>
+                        	        <td class="weather-daytemp">-20 <img src="images/weather/1.png" alt="" class="weather-icon" title="переменная облачность" /></td>
+                        	        <td class="weather-nighttemp">-18 <img src="images/weather/2.png" alt="" class="weather-icon" title="переменная облачность" /></td>
+                        	        <td class="weather-wind">СВ 2м/с</td>
+                        	        <td class="weather-cond">переменная облачность небольшой снег</td>
+                    	        </tr>
+                        	    <tr class="even">
+                        	        <td class="weather-day"><h3>Пн</h3> 19 декабря</td>
+                        	        <td class="weather-daytemp">-20 <img src="images/weather/1.png" alt="" class="weather-icon" title="переменная облачность" /></td>
+                        	        <td class="weather-nighttemp">-18 <img src="images/weather/2.png" alt="" class="weather-icon" title="переменная облачность" /></td>
+                        	        <td class="weather-wind">СВ 2м/с</td>
+                        	        <td class="weather-cond">переменная облачность небольшой снег</td>
+                    	        </tr>
+                    	    </table>
+                        </div>
+                        <div id="weather-tabs-forecast10" class="weather-tabs-forecast">
+                        	<table class="weather-table" border="0" cellspacing="0" cellpadding="0">
+                        	    <tr>
+                        	        <th scope="col">&nbsp;</th>
+                        	        <th scope="col">День</th>
+                        	        <th scope="col">Ночь</th>
+                        	        <th scope="col">&nbsp;</th>
+                        	        <th scope="col">&nbsp;</th>
+                    	        </tr>
+                        	    <tr>
+                        	        <td class="weather-day"><h3>Сегодня</h3> 14 декабря</td>
+                        	        <td class="weather-daytemp">-20 <img src="images/weather/1.png" alt="" class="weather-icon" title="переменная облачность" /></td>
+                        	        <td class="weather-nighttemp">-18 <img src="images/weather/2.png" alt="" class="weather-icon" title="переменная облачность" /></td>
+                        	        <td class="weather-wind">СВ 2м/с</td>
+                        	        <td class="weather-cond">переменная облачность небольшой снег</td>
+                    	        </tr>
+                        	    <tr class="weather-dayoff even">
+                        	        <td class="weather-day"><h3>Сб</h3> &nbsp;</td>
+                        	        <td class="weather-daytemp">-20 <img src="images/weather/1.png" alt="" class="weather-icon" title="переменная облачность" /></td>
+                        	        <td class="weather-nighttemp">-18 <img src="images/weather/2.png" alt="" class="weather-icon" title="переменная облачность" /></td>
+                        	        <td class="weather-wind">СВ 2м/с</td>
+                        	        <td class="weather-cond">переменная облачность небольшой снег</td>
+                    	        </tr>
+                        	    <tr class="weather-dayoff">
+                        	        <td class="weather-day"><h3>Вс</h3> &nbsp;</td>
+                        	        <td class="weather-daytemp">-20 <img src="images/weather/1.png" alt="" class="weather-icon" title="переменная облачность" /></td>
+                        	        <td class="weather-nighttemp">-18 <img src="images/weather/2.png" alt="" class="weather-icon" title="переменная облачность" /></td>
+                        	        <td class="weather-wind">СВ 2м/с</td>
+                        	        <td class="weather-cond">переменная облачность небольшой снег</td>
+                    	        </tr>
+                        	    <tr class="even">
+                        	        <td class="weather-day"><h3>Пн</h3> 19 декабря</td>
+                        	        <td class="weather-daytemp">-20 <img src="images/weather/1.png" alt="" class="weather-icon" title="переменная облачность" /></td>
+                        	        <td class="weather-nighttemp">-18 <img src="images/weather/2.png" alt="" class="weather-icon" title="переменная облачность" /></td>
+                        	        <td class="weather-wind">СВ 2м/с</td>
+                        	        <td class="weather-cond">переменная облачность небольшой снег</td>
+                    	        </tr>
+                                <tr>
+                        	        <td class="weather-day"><h3>Вт</h3> 20 декабря</td>
+                        	        <td class="weather-daytemp">-20 <img src="images/weather/1.png" alt="" class="weather-icon" title="переменная облачность" /></td>
+                        	        <td class="weather-nighttemp">-18 <img src="images/weather/2.png" alt="" class="weather-icon" title="переменная облачность" /></td>
+                        	        <td class="weather-wind">СВ 2м/с</td>
+                        	        <td class="weather-cond">переменная облачность небольшой снег</td>
+                    	        </tr>
+                                <tr class="even">
+                        	        <td class="weather-day"><h3>Ср</h3> 21 декабря</td>
+                        	        <td class="weather-daytemp">-20 <img src="images/weather/1.png" alt="" class="weather-icon" title="переменная облачность" /></td>
+                        	        <td class="weather-nighttemp">-18 <img src="images/weather/2.png" alt="" class="weather-icon" title="переменная облачность" /></td>
+                        	        <td class="weather-wind">СВ 2м/с</td>
+                        	        <td class="weather-cond">переменная облачность небольшой снег</td>
+                    	        </tr>
+                                <tr>
+                        	        <td class="weather-day"><h3>Чт</h3> 22 декабря</td>
+                        	        <td class="weather-daytemp">-20 <img src="images/weather/1.png" alt="" class="weather-icon" title="переменная облачность" /></td>
+                        	        <td class="weather-nighttemp">-18 <img src="images/weather/2.png" alt="" class="weather-icon" title="переменная облачность" /></td>
+                        	        <td class="weather-wind">СВ 2м/с</td>
+                        	        <td class="weather-cond">переменная облачность небольшой снег</td>
+                    	        </tr>
+                                <tr class="even">
+                        	        <td class="weather-day"><h3>Чт</h3> 23 декабря</td>
+                        	        <td class="weather-daytemp">-20 <img src="images/weather/1.png" alt="" class="weather-icon" title="переменная облачность" /></td>
+                        	        <td class="weather-nighttemp">-18 <img src="images/weather/2.png" alt="" class="weather-icon" title="переменная облачность" /></td>
+                        	        <td class="weather-wind">СВ 2м/с</td>
+                        	        <td class="weather-cond">переменная облачность небольшой снег</td>
+                    	        </tr>
+                                <tr>
+                        	        <td class="weather-day"><h3>Пт</h3> 24 декабря</td>
+                        	        <td class="weather-daytemp">-20 <img src="images/weather/1.png" alt="" class="weather-icon" title="переменная облачность" /></td>
+                        	        <td class="weather-nighttemp">-18 <img src="images/weather/2.png" alt="" class="weather-icon" title="переменная облачность" /></td>
+                        	        <td class="weather-wind">СВ 2м/с</td>
+                        	        <td class="weather-cond">переменная облачность небольшой снег</td>
+                    	        </tr>
+                                <tr class="weather-dayoff even">
+                        	        <td class="weather-day"><h3>Сб</h3> &nbsp;</td>
+                        	        <td class="weather-daytemp">-20 <img src="images/weather/1.png" alt="" class="weather-icon" title="переменная облачность" /></td>
+                        	        <td class="weather-nighttemp">-18 <img src="images/weather/2.png" alt="" class="weather-icon" title="переменная облачность" /></td>
+                        	        <td class="weather-wind">СВ 2м/с</td>
+                        	        <td class="weather-cond">переменная облачность небольшой снег</td>
+                    	        </tr>
+                    	    </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clr"></div>
+            
+            <h1>Пример обычного заголовка</h1>
+            <p>Текст со <a href="#">ссылкой</a></p>
+            
+            <div class="heading h1">Пример псевдо-заголовка</div>
+            <p>Текст с <span class="anchor">псевдо-ссылкой</span></p>
+            
+        </div>
+    </div>
+</div>
+
+<!--Footer-->
+<div id="footer">
+	<div id="footer-content" class="viewport">
+        <div id="copyright">&copy; PoldenInfo</div>
+        <div id="contacts">тел.: +7 (3822) 43-31-30, 433-126, факс: +7 (3822) 43-32-18. <a href="#">Написать нам</a></div>
+    </div>
+</div>
+</body>
+</html>

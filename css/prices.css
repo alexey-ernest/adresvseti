@@ -1,0 +1,179 @@
+@charset "utf-8";
+/* CSS Document */
+
+#standards {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+h1  {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 2.8em;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #000;
+	margin-bottom: 10px;
+}
+h3 {
+	font-size: 2em;
+	font-weight: normal;
+	color: #666;
+	margin-bottom: 4px;
+}
+ul {
+	margin-left: 10px;
+	margin-top: 4px;
+}
+ul li {
+	margin-bottom: 4px;
+}
+
+
+#standards .standard_offer {
+	width: 25%;
+	float: left;
+	margin-bottom: 40px;
+	text-align: center;
+}
+#standards .offer_content {
+	width: 90%;
+}
+#standards .offer_price {
+	background-color: #B0B220;
+	padding: 8px;
+	font-size: 1.1em;
+	color: #FFF;
+	font-weight: bold;
+}
+
+
+#standards .offer_caption {
+	background-color: #333;
+	padding: 10px;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FFF;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+#standards .offer_image {
+	text-align: center;
+	height: 200px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: none;
+	border-right-style: solid;
+	border-bottom-style: none;
+	border-left-style: solid;
+	border-top-color: #B0B220;
+	border-right-color: #B0B220;
+	border-bottom-color: #B0B220;
+	border-left-color: #B0B220;
+}
+#standards .offer_description {
+	margin-top: 8px;
+	text-align: left;
+}
+#right_splash  {
+	float: right;
+	background-color: #F8F8F8;
+	width: 200px;
+	color: #666;
+	border: 1px solid #999;
+	font-size: 1.2em;
+	padding: 4px;
+}
+#modules {
+	margin-top: 40px;
+}
+#flash_interfaces {
+	margin-top: 40px;
+}
+#modules table {
+	background-color: #f9f9f9;
+}
+#modules table caption {
+	text-align: left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.4em;
+	color: #333;
+	font-weight: normal;
+	padding-bottom: 8px;
+}
+#modules table th {
+	text-align: left;
+	padding-top: 10px;
+	padding-right: 0px;
+	padding-bottom: 10px;
+	padding-left: 4px;
+	background-color: #333;
+	color: #FFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.1em;
+}
+#modules table td {
+	padding: 4px;
+}
+.table_label {
+	font-size: 1.1em;
+	color: #333;
+}
+
+.price {
+	font-size: 1.1em;
+	font-weight: bold;
+	color: #333;
+}
+#modules table tr.div {
+	background-color: #FFF;
+}
+#interfaces {
+	margin-top: 20px;
+}
+#interfaces .interface {
+	width: 33%;
+	float: right;
+	text-align: right;
+	height: 260px;
+	margin-bottom: 40px;
+}
+#interfaces .interface .caption {
+	width: 20px;
+	background-color: #333;
+	height: 260px;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	text-transform: uppercase;
+	color: #FFF;
+	font-weight: bold;
+	float: right;
+}
+#interfaces .interface .interface_screen {
+	float: right;
+	height: 200px;
+	text-align: right;
+}
+#interfaces .interface .description {
+	margin-top: 210px;
+	margin-right: 20px;
+	height: 30px;
+	padding-right: 4px;
+	color: #333;
+}
+#interfaces .interface .interface_price {
+	padding-right: 4px;
+	margin-right: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.2em;
+	color: #F36;
+	font-weight: bold;
+}
+#phones {
+	float: right;
+	margin-top: 0px;
+	text-align: right;
+	font-size: 1.2em;
+}
